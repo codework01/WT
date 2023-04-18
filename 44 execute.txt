@@ -1,0 +1,157 @@
+User Information
+<?xml version="1.0"?>
+<userdata>
+<user1>
+<jntuno>561</jntuno>
+<name> chandu</name>
+<phno>9989891510</phno>
+<address>srikakulam</address>
+</user1>
+<user2>
+<jntuno>540</jntuno>
+<name> karteek</name>
+<phno>9701443556</phno>
+<address>srikakulam1</address>
+</user2>
+<user3>
+<jntuno>525</jntuno>
+<name> giri</name>
+<phno>9897895301</phno>
+<address>rajam</address>
+</user3><user4>
+<jntuno>526</jntuno>
+<name>gopi</name>
+<phno>9999789540</phno>
+<address>parlakimidi</address>
+</user4>
+<user5>
+<jntuno>513</jntuno>
+<name> manoj</name>
+<phno>9989233331</phno>
+<address>hyderabad</address>
+</user5>
+<user6>
+<jntuno>514</jntuno>
+<name> balaji</name>
+<phno>9999789560</phno>
+<address>vizag</address>
+</user6>
+<user7>
+<jntuno>567</jntuno>
+<name>kiran </name>
+<phno>9999178957</phno>
+<address>vijayanagaram</address>
+</user7>
+<user8>
+<jntuno>518</jntuno>
+<name> sekhar</name>
+<phno>789580</phno>
+<address>bobili</address>
+</user8>
+<user9>
+<jntuno>517</jntuno>
+<name>chaitu</name>
+
+<phno>789590</phno>
+<address>sallur</address>
+</user9>
+<user10>
+<jntuno>595</jntuno>
+<name> sravan</name>
+<phno>9000789500</phno>
+<address>sklm</address>
+</user10>
+</userdata>
+
+
+Information Retrival
+
+<html>
+<!--DOM with javascript>
+<head>
+<title>user profile example</title>
+</head>
+<body>
+<script type="text/JavaScript">
+var xmldoc=new ActiveXObject("Microsoft.XMLDOM"); xmldoc.load("data.xml");
+var ele=xmldoc.documentElement;
+var y=window.prompt("eneter user num",1);
+var node=ele.childNodes.item(y-1);
+for(var i=0;i<node.childNodes.length;i++)
+{
+var child=node.childNodes.item(i);
+var val=child.firstChild;
+document.write("<h2>"+child.nodeName+":"+val.nodeValue);
+}
+</script>
+</body>
+</html>
+
+StudentDetails.Java :
+import javax.servlet.*;
+import java.util.*;
+import java.io.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+
+public class StudentDetails implements Servlet
+{
+private DocumentBuilderFactory fact;
+private DocumentBuilder builder;
+private Document doc;
+private NodeList list,childs;
+private Node node,parent,child;
+private String str;
+private String hallTicket;
+private ServletConfig sc;
+public void init(ServletConfig sc)
+{
+try
+{
+this.sc=sc;
+str="C:\Program Files\Apache Software Foundation\Tomcat 5.0\webapps\StudentDetails\WEB-INF\classes\Details.xml";
+fact=DocumentBuilderFactory.newInstance();
+builder =fact.newDocumentBuilder();
+doc=builder.parse(str);
+System.out.println("In the Init Method");
+}
+catch(Exception e)
+{
+System.out.println("Error in the Init Method"+e.getMessage());
+}
+}
+public void service(ServletRequest req, ServletResponse res)throws ServletException,IOException
+{
+hallTicket=req.getParameter("hall");
+res.setContentType("text/html");
+PrintWriter pw=res.getWriter();
+list=doc.getElementsByTagName("HallTicketNo");
+pw.print("<center><h1>Welcome To Student Details</center></h1>");
+for(int i=0;i<list.getLength();i++)
+{
+node=list.item(i);
+if(node.getTextContent().equals(hallTicket))
+{
+parent=node.getParentNode();
+childs=parent.getChildNodes();
+for(int j=1;j<childs.getLength()-1;j=j+2)
+{	
+child=childs.item(j);	
+pw.print("<center>"+child.getNodeName()+"	"+child.getTextContent());
+}	
+break;
+}//if
+}//for
+}//service
+public ServletConfig getServletConfig()
+{
+return sc;
+}
+public String getServletInfo()
+{
+return "Developed By Khaja HabeebUddin";
+}
+public void destroy()
+{
+}
+}

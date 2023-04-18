@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Name - Home Page</title>
+  </head>
+  <body>
+    <h1>Welcome to Bank Name</h1>
+    <nav>
+      <ul>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <p>This is the home page of Bank Name. Please use the navigation bar to register or login.</p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Name - Registration and Login</title>
+  </head>
+  <body>
+    <h1>Register or Login</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+    <h2>Registration Form</h2>
+    <form action="register.php" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Register">
+    </form>
+    <h2>Login Form</h2>
+    <form action="login.php" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Name - User Profile</title>
+  </head>
+  <body>
+    <h1>User Profile</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="transactions.html">Transactions</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </nav>
+    <h2>Welcome, Username!</h2>
+    <p>Here is your user profile information:</p>
+    <ul>
+      <li>Username: Username</li>
+      <li>Balance: $1,000.00</li>
+      <li>Account Number: 1234567890</li>
+    </ul>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Name - Transactions</title>
+  </head>
+  <body>
+    <h1>Transactions</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </nav>
+    <h2>Transaction History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date
+

@@ -1,0 +1,123 @@
+Home page
+html>
+<head>
+<title> ONLINE Bank</title>
+</head>
+<body background="online1.jpg">
+<a href="user.html"target="_blank">Check Your Details Here!</a>
+<center>
+<br><br><br><br><br>
+<h1><FONT COLOR="red"size="50">WELCOME TO ONLINE Bank</FONT></H1>
+<font color="blue"size="25">if aleready registered</font>
+<a href="login.html"target=_blank">  LOGIN HERE</a><br><br><br>
+<font color="red"size="25">Not Registered?</font>
+<a href="registration.html"target="_blank">REGISTER HERE</a>
+</BODY>
+</HTML><
+
+
+
+
+Home page
+html>
+<head>
+<title> ONLINE Bank</title>
+</head>
+<body background="online1.jpg">
+<a href="user.html"target="_blank">Check Your Details Here!</a>
+<center>
+<br><br><br><br><br>
+<h1><FONT COLOR="red"size="50">WELCOME TO ONLINE Bank</FONT></H1>
+<font color="blue"size="25">if aleready registered</font>
+<a href="login.html"target=_blank">  LOGIN HERE</a><br><br><br>
+<font color="red"size="25">Not Registered?</font>
+<a href="registration.html"target="_blank">REGISTER HERE</a>
+</BODY>
+</HTML><
+
+
+
+
+
+Login page
+
+Source-Code for User-login
+<html>
+<head>
+<title> ONLINE Bank</title>
+</head>
+<body bgcolor="yellow">
+<center>
+<h1><FONT COLOR="PURPLE">WELCOME TO LOGIN PAGE</FONT></H1><br>
+<form action="bank.html">
+<fieldset>
+<legend>Enter Your Login Details</legend>
+Enter Your Name:<input type="text"name="name"><br><br><br>
+Enter Password:	<input type="password"name="pwd"><br><br><br>
+<input type="reset"name="reset">
+<input type="submit"name="submit">
+<input type="Submit"name="submit">
+</BODY>
+</HTML>
+
+
+
+
+
+c. User Profile Page
+
+<html>
+<head>
+<title> Online Bank</title>
+</head>
+<body bgcolor="yellow">
+<center>
+<h1><FONT COLOR="PURPLE">WELCOME TO Online Banking</FONT></H1><br>
+<h2><FONT COLOR="PURPLE">User Profile</FONT></H2><br>
+<form action="home.html">
+<fieldset>
+<legend>Enter Your Details Here</legend>
+Enter Your First  Name:<input type="text"name="name"><br><br><br>
+Enter Your Second Name:<input type="text"name="sname"><br><br>
+Enter Your Password:	<input type="password"name="pwd"><br><br><br>
+Re-Enter Your Password:	<input type="password"name="pwd"><br><br><br>
+Select Your gender:<input type="radio"name="gender">Male
+<input type="radio"name="gender">FeMale
+<input type="radio"name="gender">Others<br><br><br>
+Choose Your Stream:<select name="">
+<option value="Current Account">Current Account</option>
+<option value="Savings Account">Savings Account</option>
+
+</select><br><br><br>
+Enter Your Contact Details:<br><br><textarea rows="5"cols="30">
+</textarea><br><br>
+Terms & Conditions:I Agree<input type="checkbox"name="T&C">Agree<input type="checkbox"name="T&C">
+<br><br>
+<input type="reset"name=reset">
+<input type="submit"name="submit">
+</BODY>
+</HTML>
+
+
+
+
+
+d. Transactions
+
+<html>
+<head>
+<title> ONLINE Bank</title>
+</head>
+<body bgcolor="yellow">
+<center>
+<h1><FONT COLOR="PURPLE">Transactions</FONT></H1><br>
+<form action="bank.html">
+<fieldset>
+<legend>Transactios</legend>
+From Account:<input type="text"name="name"><br><br><br>
+To Account:	<input type="password"name="pwd"><br><br><br>
+<input type="reset"name="reset">
+<input type="submit"name="submit">
+<input type="Submit"name="submit">
+</BODY>
+</HTML>

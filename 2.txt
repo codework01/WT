@@ -1,0 +1,114 @@
+<form action="register.php" method="post" onsubmit="return validateRegistrationForm()">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Register">
+</form>
+
+<script>
+function validateRegistrationForm() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  
+  if (username == "") {
+    alert("Please enter a username.");
+    return false;
+  }
+  
+  if (password == "") {
+    alert("Please enter a password.");
+    return false;
+  }
+  
+  // Additional validation can be added here, such as checking password strength, ensuring username uniqueness, etc.
+  
+  return true;
+}
+</script>
+
+
+
+
+
+<form action="login.php" method="post" onsubmit="return validateLoginForm()">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Login">
+</form>
+
+<script>
+function validateLoginForm() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  
+  if (username == "") {
+    alert("Please enter a username.");
+    return false;
+  }
+  
+  if (password == "") {
+    alert("Please enter a password.");
+    return false;
+  }
+  
+  // Additional validation can be added here, such as checking if the username and password match those stored in the database.
+  
+  return true;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<form action="process_payment.php" method="post" onsubmit="return validatePaymentForm()">
+  <label for="name">Name on Card:</label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="card_number">Card Number:</label>
+  <input type="text" id="card_number" name="card_number"><br><br>
+  <label for="expiration_date">Expiration Date:</label>
+  <input type="text" id="expiration_date" name="expiration_date"><br><br>
+  <input type="submit" value="Make Payment">
+</form>
+
+<script>
+function validatePaymentForm() {
+  const name = document.getElementById("name").value;
+  const cardNumber = document.getElementById("card_number").value;
+  const expirationDate = document.getElementById("expiration_date").value;
+  
+  if (name == "") {
+    alert("Please enter the name on the card.");
+    return false;
+  }
+  
+  if (cardNumber == "") {
+    alert("Please enter a card number.");
+    return false;
+  }
+  
+  if (isNaN(cardNumber)) {
+    alert("Please enter a valid card number.");
+    return false;
+  }
+  
+  if (expirationDate == "") {
+    alert("Please enter the expiration date.");
+    return false;
+  }
+  
+  // Additional validation can be added here, such as checking if the card is expired, validating the card security code, etc.
+  
+  return true;
+}
+</script>
+
+

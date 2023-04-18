@@ -1,0 +1,36 @@
+
+
+
+
+import xml.etree.ElementTree as ET
+
+# Load the XML document from the server
+tree = ET.parse('users.xml')
+root = tree.getroot()
+
+# Function to get user details by ID
+def get_user_details(user_id):
+    # Find the user element with the given ID
+    user_elem = root.find(f"./user[@id='{user_id}']")
+    if user_elem is None:
+        return None
+    
+    # Extract the user details from the element
+    first_name = user_elem.find('firstName').text
+    last_name = user_elem.find('lastName').text
+    email = user_elem.find('email').text
+    dob = user_elem.find('dob').text
+    
+    # Return the user details as a dictionary
+    return {
+        'id': user_id,
+        'firstName': first_name,
+        'lastName': last_name,
+        'email': email,
+        'dob': dob
+    }
+
+# Test the function with some sample user IDs
+print(get_user_details('1'))
+print(get_user_details('2'))
+print(get_user_details('3'))
